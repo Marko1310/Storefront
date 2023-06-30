@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@medusajs/admin": "^7.0.0-beta-20230624084632",
+    "@medusajs/medusa": "^1.12.2-beta-20230624084632",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -21,5 +23,9 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }
