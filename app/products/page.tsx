@@ -1,15 +1,12 @@
 import medusaClient from "../lib/config";
 
-const Products = async () => {
-  const { products, count, offset } = await medusaClient.products.list();
+// components
+import ProductsList from "../components/ProductsList";
 
-  return (
-    <>
-      {products.map((el) => {
-        return <p key={el.id}> {el.title}</p>;
-      })}
-    </>
-  );
+const Products = async () => {
+  const { products: products } = await medusaClient.products.list();
+
+  return <ProductsList products={products} />;
 };
 
 export default Products;
