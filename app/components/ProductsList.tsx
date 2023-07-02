@@ -14,20 +14,17 @@ const ProductsComponent: React.FC<ProductsComponentProps> =
           {products.map((el) => {
             return (
               <div
-                className="w-min-[16rem] w-max-[17.22rem] h-max-[19.75rem] flex flex-col justify-center rounded-sm bg-[#F7F7FA]"
+                className="w-min-[16rem] w-max-[17.22rem] h-max-[19.75rem] flex flex-col justify-center rounded-sm bg-[#F7F7FA] transition-transform duration-300 hover:scale-[1.02]"
                 key={el.id}
               >
                 <div className=" relative flex h-full flex-1 justify-center ">
                   <Image
                     src={el.thumbnail || ""}
                     alt="thumbnail"
-                    // width={100}
-                    // height={100}
                     width="0"
                     height="0"
                     sizes="100vw"
                     className="h-full w-full object-contain"
-                    // className="h-full w-full object-contain"
                   />
                 </div>
 
