@@ -10,7 +10,7 @@ type ProductsComponentProps = {
 const ProductsComponent: React.FC<ProductsComponentProps> =
   function ProductsComponent({ products }) {
     return (
-      <div className="w-ful h-full px-2 ">
+      <div className="h-full w-full px-2 ">
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => {
             return (
