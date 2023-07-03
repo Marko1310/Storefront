@@ -1,16 +1,38 @@
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing";
+import { ProductCollection } from "@medusajs/medusa/dist/models/product-collection";
+
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
 type ProductsComponentProps = {
   products: PricedProduct[];
+  collections: ProductCollection[];
 };
 
 const ProductsComponent: React.FC<ProductsComponentProps> =
-  function ProductsComponent({ products }) {
+  function ProductsComponent({ products, collections }) {
     return (
       <div className="h-full w-full px-2 ">
+        <div>
+          {collections.map((collection) => {
+            return (
+              <form key={collection.id} action="/action_page.php">
+                <input
+                  type="checkbox"
+                  id={collection.id}
+                  name={collection.title}
+                  value={collection.title}
+                />
+                <label> {collection.title}</label>
+              </form>
+            );
+          })}
+          {/* <form action="/action_page.php">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+            <label> I have a bike</label>
+          </form> */}
+        </div>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => {
             return (
