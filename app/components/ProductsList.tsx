@@ -17,26 +17,22 @@ const ProductsComponent: React.FC<ProductsComponentProps> =
         <div>
           {collections.map((collection) => {
             return (
-              <form key={collection.id} action="/action_page.php">
+              <label key={collection.id}>
                 <input
                   type="checkbox"
                   id={collection.id}
                   name={collection.title}
                   value={collection.title}
                 />
-                <label> {collection.title}</label>
-              </form>
+                {collection.title}
+              </label>
             );
           })}
-          {/* <form action="/action_page.php">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
-            <label> I have a bike</label>
-          </form> */}
         </div>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => {
             return (
-              <Link key={product.id} href={`/products/${product.id}`}>
+              <Link key={product.id} href={`/${product.id}`}>
                 <div
                   className="w-min-[16rem] w-max-[17.22rem] h-max-[19.75rem] flex flex-col justify-center rounded-sm bg-[#F7F7FA] shadow-sm transition-transform duration-300 hover:scale-[1.01] hover:cursor-pointer hover:shadow-lg"
                   key={product.id}

@@ -1,4 +1,4 @@
-import medusaClient from "../../lib/config";
+import medusaClient from "../lib/config";
 
 //components
 import EachProduct from "@/app/components/EachProduct";
