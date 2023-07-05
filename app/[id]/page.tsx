@@ -1,16 +1,16 @@
-import medusaClient from "../lib/config";
-
 //components
 import EachProduct from "@/app/components/EachProduct";
 
-interface ProductProps {
+import getProduct from "../lib/getProduct";
+
+type ProductProps = {
   params: {
     id: string;
   };
-}
+};
 
 const Product: React.FC<ProductProps> = async ({ params }) => {
-  const { product } = await medusaClient.products.retrieve(params.id);
+  const product = await getProduct(params.id);
 
   return <EachProduct product={product} />;
 };

@@ -12,7 +12,7 @@ const Collection = async () => {
             <Link
               key={collection.id}
               href={`/products/${collection.title}`}
-              className=" mb-4 mr-2 flex h-10 w-24 items-center justify-center bg-gray-300 font-semibold transition duration-300 hover:underline md:bg-transparent md:font-normal"
+              className=" mb-4 mr-2 flex h-10 w-24 items-center justify-center bg-gray-300 font-semibold transition duration-300 hover:underline md:mb-2 md:bg-transparent md:text-sm md:font-normal"
             >
               <p className="py-1 ">{collection.title}</p>
             </Link>

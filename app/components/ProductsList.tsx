@@ -16,21 +16,6 @@ const ProductsList: React.FC<ProductsListProps> = ({
 }) => {
   return (
     <div className="h-full w-full px-2 ">
-      {/* <div>
-        {collections.map((collection) => {
-          return (
-            <label key={collection.id}>
-              <input
-                type="checkbox"
-                id={collection.id}
-                name={collection.title}
-                value={collection.title}
-              />
-              {collection.title}
-            </label>
-          );
-        })}
-      </div> */}
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => {
           return (

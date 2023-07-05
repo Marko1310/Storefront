@@ -3,7 +3,7 @@ import medusaClient from "../../lib/config";
 // components
 import ProductsList from "../../components/ProductsList";
 
-interface ProductProps {
+type ProductProps = {
   params: {
     collection: string;
   };

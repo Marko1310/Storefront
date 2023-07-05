@@ -1,11 +1,12 @@
-import medusaClient from "../lib/config";
+import getAllProducts from "../lib/getAllProducts";
+import getAllCollections from "../lib/getAllCollections";
 
 // components
 import ProductsList from "../components/ProductsList";
 
 const Products = async () => {
-  const { products: products } = await medusaClient.products.list();
-  const { collections: collections } = await medusaClient.collections.list();
+  const products = await getAllProducts();
+  const collections = await getAllCollections();
 
   return <ProductsList products={products} collections={collections} />;
 };
