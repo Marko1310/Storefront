@@ -30,7 +30,7 @@ const EachProduct: React.FC<ProductsComponentProps> = ({
             {product.variants[0].prices[0].amount}{" "}
             {product.variants[0].prices[0].currency_code}
           </p>
-          <p className="font-bold">Product details</p>
+          <p className="mt-4 text-sm font-light">{product.description}</p>
 
           <div className="sm:flex-col1 mt-10 flex">
             <button
@@ -40,6 +40,9 @@ const EachProduct: React.FC<ProductsComponentProps> = ({
               Add to Cart +
             </button>
           </div>
+          <p className="mt-8 text-sm font-semibold">Product details</p>
+          <p className="mt-4 text-sm font-semibold">Material</p>
+          <p className="mt-8 text-sm">{product.material}</p>
         </div>
       </div>
     </div>
