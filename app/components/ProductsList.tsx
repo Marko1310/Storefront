@@ -7,13 +7,9 @@ import Link from "next/link";
 
 type ProductsListProps = {
   products: PricedProduct[];
-  collections: ProductCollection[];
 };
 
-const ProductsList: React.FC<ProductsListProps> = ({
-  products,
-  collections,
-}) => {
+const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   return (
     <div className="h-full w-full px-2 ">
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">

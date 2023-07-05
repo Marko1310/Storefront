@@ -5,19 +5,17 @@ import ProductsList from "../../components/ProductsList";
 
 type ProductProps = {
   params: {
-    collection: string;
+    collectionID: string;
   };
-}
+};
 
 const CollectionProducts: React.FC<ProductProps> = async ({ params }) => {
+  console.log(params.collectionID);
   const { products: products } = await medusaClient.products.list({
-    collection_id: [
-      "pcol_01H4DTGX2A046VBG7RPKC9K00K",
-      "pcol_01H4DTHPRAQCV382MPY8EDVQQT",
-    ],
+    collection_id: [`${params.collectionID}`],
   });
 
-  return <ProductsList products={products} collections={[]} />;
+  return <ProductsList products={products} />;
 };
 
 export default CollectionProducts;

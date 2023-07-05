@@ -5,10 +5,15 @@ import getAllCollections from "../lib/getAllCollections";
 import ProductsList from "../components/ProductsList";
 
 const Products = async () => {
-  const products = await getAllProducts();
-  const collections = await getAllCollections();
+  const productsData = getAllProducts();
+  const collectionsData = getAllCollections();
 
-  return <ProductsList products={products} collections={collections} />;
+  const [products, collections] = await Promise.all([
+    productsData,
+    collectionsData,
+  ]);
+
+  return <ProductsList products={products} />;
 };
 
 export default Products;
